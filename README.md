@@ -15,10 +15,10 @@ In order to improve the performance of read.table, we create a vector of column
 classes by reading first 5 rows of the the train dataset to obtain the class 
 of each column.
 
-For step 1 we use the cbind and rbind functions to merge the training and the 
+For step 1, we use the cbind and rbind functions to merge the training and the 
 test datasets to create one data set
 
-For step 2 we get column names that contain -mean() and -std() to extract only 
+For step 2, we get column names that contain -mean() and -std() to extract only 
 the measurements on the mean and standard deviation for each measurement. It is
 important to search for "-mean()" instead of "mean" since we do not want to
 include variables having "meanFreq" or "angle" in their names.
@@ -35,7 +35,7 @@ descriptive e.g. by replacing "t" with "time" and "f" with "freq". We do not wan
 to create very long names as they do not remain very human-readable even with 
 camel case. Hence, we do not expand words like Acc, Gyro, Jerk.
 
-For step 5 we use the aggregate function to create a dataset with the average of
+For step 5, we use the aggregate function to create a dataset with the average of
 each variable for each activity and each subject. This dataset is written to a
 file named "tidy.txt" in the working directory.
 
